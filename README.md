@@ -4,7 +4,7 @@ Site vitrine statique en français. Ouvrir `index.html` ou servir ce dossier ave
 
 Identité bleue et structure scolaire : accueil avec carousel, présentation, informations parents, vie scolaire, galerie, équipe éducative, témoignages, admissions et contact. Les témoignages défilent lorsque leur nombre dépasse les emplacements visibles. Les animations respectent la préférence de réduction des mouvements.
 
-Les images de la bannière et du guide sont illustratives. Les profils et témoignages sont explicitement provisoires. À fournir : coordonnées, lien d’admission et informations de l’équipe. Le formulaire de contact prépare un message à copier, sans l’envoyer, en attendant l’adresse officielle de l’école. Les boutons d’admission conduisent à la rubrique contact.
+Les images de la bannière et du guide sont illustratives. Les profils et témoignages sont explicitement provisoires. Le téléphone et les liens Facebook, Instagram et YouTube figurent dans les coordonnées du site. Le formulaire de contact prépare un message à copier, sans l’envoyer, en attendant l’adresse officielle de l’école. Les boutons d’admission conduisent à la rubrique contact.
 
 ## Galerie Google Drive
 
