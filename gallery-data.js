@@ -74,5 +74,70 @@ window.ECC_GALLERY_PHOTOS = [
     "id": "1N3FOQIirBop0bSMNPrJngt2SLPOokENh",
     "title": "Photo ECC 15",
     "createdTime": "2026-10-25T04:42:20.083Z"
+  },
+  {
+    "id": "15qeCdDcvUh8tgrcyUnXUx_VB4pDXFtOF",
+    "title": "Galat 2026 - Photo 1",
+    "createdTime": "2025-12-25T12:48:25.000Z"
+  },
+  {
+    "id": "1aoiF1kp9NAsZK4jQ0uplhN_XIHLt2kQH",
+    "title": "Galat 2026 - Photo 2",
+    "createdTime": "2026-01-03T21:15:41.000Z"
+  },
+  {
+    "id": "1EgYWJIpoMm7SCgRJO2H1dQyqtbkwRAgA",
+    "title": "Galat 2026 - Photo 3",
+    "createdTime": "2026-01-03T21:20:45.000Z"
+  },
+  {
+    "id": "142q2bTJhMwNItHSpCyBbGwpCA4nsH0Qy",
+    "title": "Galat 2026 - Photo 4",
+    "createdTime": "2026-01-03T21:25:37.000Z"
+  },
+  {
+    "id": "1S50ndxLDE6XmswhVpOhAHVKvsHq9pza4",
+    "title": "Galat 2026 - Photo 5",
+    "createdTime": "2026-01-04T11:24:41.000Z"
+  },
+  {
+    "id": "11Vv-hpfSV4BFo-pvu1XzO6cR9U6gRf64",
+    "title": "Galat 2026 - Photo 6",
+    "createdTime": "2026-01-04T11:27:35.000Z"
+  },
+  {
+    "id": "1nnmDA_C54xOvLGdPNxHJgvKrtlWpR5w8",
+    "title": "Galat 2026 - Photo 7",
+    "createdTime": "2026-01-04T11:30:44.000Z"
+  },
+  {
+    "id": "1N8zMAz0aSMNRg9QuEKL19mU3igp8LZ8D",
+    "title": "Galat 2026 - Photo 8",
+    "createdTime": "2026-01-04T11:33:32.000Z"
+  },
+  {
+    "id": "1dByYlwZEPxwvqjMTRX1xvvnPacZKs4_4",
+    "title": "Galat 2026 - Photo 9",
+    "createdTime": "2026-01-04T11:35:31.000Z"
+  },
+  {
+    "id": "1G_9l06IowB3bfVYJUD_ApBSdFmLbJNEC",
+    "title": "Galat 2026 - Photo 10",
+    "createdTime": "2026-01-04T11:37:18.000Z"
+  },
+  {
+    "id": "1UWa-XAWISAQMwpNDGVpykooQA_bAmRt7",
+    "title": "Galat 2026 - Photo 11",
+    "createdTime": "2026-01-04T11:37:49.000Z"
+  },
+  {
+    "id": "1dG9m1GpsW6WpgzbI3lKRYP9K4l4Q4rdh",
+    "title": "Galat 2026 - Photo 12",
+    "createdTime": "2026-01-04T11:38:27.000Z"
+  },
+  {
+    "id": "18hMtrhtcYmr03rn_V9PM4Txk4tV-ETgm",
+    "title": "Galat 2026 - Photo 13",
+    "createdTime": "2026-01-04T11:43:40.000Z"
   }
 ];

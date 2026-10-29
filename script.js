@@ -71,3 +71,57 @@ menuToggle.addEventListener('click', () => { const open = menu.classList.toggle(
 menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && menu.classList.contains('open')) { closeMenu(); menuToggle.focus(); } });
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+const teamTrack = document.querySelector('#team-track');
+if (teamTrack) {
+  const teamCards = [...teamTrack.querySelectorAll('.team-card')];
+  const teamStatus = document.querySelector('#team-status');
+  let teamIndex = 0;
+  let teamScrollTimer;
+  function visibleTeamCards() {
+    if (window.matchMedia('(max-width: 520px)').matches) return 1;
+    if (window.matchMedia('(max-width: 800px)').matches) return 2;
+    return 3;
+  }
+  function updateTeamStatus() {
+    const visible = visibleTeamCards();
+    const first = Math.min(teamIndex + 1, teamCards.length);
+    const last = Math.min(teamIndex + visible, teamCards.length);
+    teamStatus.textContent = `${String(first).padStart(2, '0')}–${String(last).padStart(2, '0')} / ${teamCards.length}`;
+  }
+  function moveTeam(index) {
+    const max = Math.max(0, teamCards.length - visibleTeamCards());
+    teamIndex = Math.max(0, Math.min(index, max));
+    const card = teamCards[teamIndex];
+    if (card) {
+      teamTrack.scrollTo({
+        left: card.offsetLeft - teamCards[0].offsetLeft,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+      });
+    }
+    updateTeamStatus();
+  }
+  document.querySelector('#team-prev').addEventListener('click', () => moveTeam(teamIndex - 1));
+  document.querySelector('#team-next').addEventListener('click', () => moveTeam(teamIndex + 1));
+  teamTrack.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveTeam(teamIndex + (event.key === 'ArrowLeft' ? -1 : 1));
+    }
+  });
+  teamTrack.addEventListener('scroll', () => {
+    clearTimeout(teamScrollTimer);
+    teamScrollTimer = setTimeout(() => {
+      const firstOffset = teamCards[0].offsetLeft;
+      teamIndex = teamCards.reduce((nearest, card, index) => {
+        const currentDistance = Math.abs(teamCards[nearest].offsetLeft - firstOffset - teamTrack.scrollLeft);
+        const candidateDistance = Math.abs(card.offsetLeft - firstOffset - teamTrack.scrollLeft);
+        return candidateDistance < currentDistance ? index : nearest;
+      }, 0);
+      teamIndex = Math.min(teamIndex, Math.max(0, teamCards.length - visibleTeamCards()));
+      updateTeamStatus();
+    }, 120);
+  }, { passive: true });
+  new ResizeObserver(() => moveTeam(teamIndex)).observe(teamTrack);
+  updateTeamStatus();
+}
